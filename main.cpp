@@ -30,6 +30,14 @@ void placeAsk(){
 void placeBid(){
     std::cout << "Now Time to place a bid: Enter the amount" << std::endl;
 }
+void printWallet(){
+    std::cout << "Your wallet is empty currently" << std::endl;
+    std::cout << "The above is the data in your wallet" << std::endl;
+}
+void gotoNextTimeFrame(){
+    std::cout << "Continue....." << std::endl;
+    std::cout << "Moving to the next time frame" << std::endl;
+}
 
 int main(){
 	
@@ -37,3 +45,17 @@ int main(){
 	
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

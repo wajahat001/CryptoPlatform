@@ -39,6 +39,44 @@ void gotoNextTimeFrame(){
     std::cout << "Moving to the next time frame" << std::endl;
 }
 
+void processUserOption(int userOption){
+    if (userOption == 0)
+    { //bad option
+        std::cout << "The Option you entered is: " << userOption << std::endl;
+        std::cout << "Bad Input" << std::endl;
+    }
+    else if (userOption == 1)
+    {
+        printHelp();
+    }
+    else if (userOption == 2)
+    {
+        printExchangeStats();
+    }
+    else if (userOption == 3)
+    {
+        placeAsk();
+    }
+    else if (userOption == 4)
+    {
+        placeBid();
+    }
+    else if (userOption == 5)
+    {
+        printWallet();
+    }
+    else if (userOption == 6)
+    {
+        gotoNextTimeFrame();
+    }
+    else
+    {
+        std::cout << "The Option you entered is: " << userOption << std::endl;
+        std::cout << "Invalid input try again" << std::endl;
+    }
+}
+
+
 int main(){
 	
 	

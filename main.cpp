@@ -79,7 +79,12 @@ void processUserOption(int userOption){
 
 int main(){
 	
-	
+	   while(true){
+        printMenu();
+        int userOption = getUserOption();
+        processUserOption(userOption);
+    }
+
 	
 	return 0;
 }

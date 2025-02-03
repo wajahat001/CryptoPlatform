@@ -50,3 +50,26 @@ int MerkelMain::getUserOption(){
     std::cin >> userOption;
     return userOption;
 }
+
+
+void MerkelMain::printHelp(){
+    std::cout << "So this is the crypto exchange you will exchange your currency and make money easily" << std::endl;
+}
+void MerkelMain::printExchangeStats(){
+    std::cout << "No current stats" << std::endl;
+    std::cout << "Wait for some time" << std::endl;
+}
+void MerkelMain::placeAsk(){
+    std::cout << "Place an ask amount: Enter the amount" << std::endl;
+}
+void MerkelMain::placeBid(){
+    std::cout << "Now Time to place a bid: Enter the amount" << std::endl;
+}
+void MerkelMain::printWallet(){
+    std::cout << "Your wallet is empty currently" << std::endl;
+    std::cout << "The above is the data in your wallet" << std::endl;
+}
+void MerkelMain::gotoNextTimeFrame(){
+    std::cout << "Continue....." << std::endl;
+    std::cout << "Moving to the next time frame" << std::endl;
+}

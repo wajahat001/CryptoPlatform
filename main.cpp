@@ -84,8 +84,6 @@ int main(){
         int userOption = getUserOption();
         processUserOption(userOption);
     }
-
-	
 	return 0;
 }
 

@@ -23,8 +23,5 @@ public:
         std::string _product,
         OrderBookType _orderType,
         double _price,
-        double _amount)
-
-    {
-    }
+        double _amount);
 };

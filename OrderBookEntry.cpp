@@ -15,6 +15,7 @@ OrderBookEntry::OrderBookEntry(
                         orderType(_orderType),
                         price(_price),
                         amount(_amount)
-    {
-    	
-    }
+   {
+    
+   }
+

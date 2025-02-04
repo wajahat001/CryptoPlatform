@@ -17,6 +17,10 @@ void MerkelMain::init(){
 	
 }
 
+MerkelMain::MerkelMain(){
+    
+}
+
 void MerkelMain::loadOrderBook(){
 	
 	entries.push_back(OrderBookEntry{
@@ -32,7 +36,7 @@ void MerkelMain::loadOrderBook(){
         OrderBookType::bid,
         100.051,
         2000.991
-	)};
+    });
 }
 
 void MerkelMain::printMenu(){

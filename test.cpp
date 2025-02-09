@@ -39,6 +39,7 @@ int main(){
     std::ifstream DataFile{"data.csv"};
     std::string line;
     std::vector<std::string> tokens;
+  
 
     if(DataFile.is_open()){
         std::cout<<"File is open"<<std::endl; 
@@ -47,10 +48,10 @@ int main(){
         {
             std::cout<< line << std::endl;
             tokens = tokenise(line , ',');
+            double price = std::stod(tokens[3]);
+            double amount = std::stod(tokens[4]);
+            std::cout<< price << " : " << amount << std::endl;
 
-            for (std::string t : tokens){
-                std::cout<<t<<std::endl;
-            }
         }
         DataFile.close();
     }

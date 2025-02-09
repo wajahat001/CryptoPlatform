@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <string.h>
+#include <string>
+#include <fstream>
 
 std::vector<std::string> tokenise(std::string csvLine, char seperator){
 
@@ -26,13 +27,29 @@ std::vector<std::string> tokenise(std::string csvLine, char seperator){
 
 int main(){
 
-    std::vector<std::string> tokens;
-    std::string s = "thing,thing1,thing2,thing3";
+    // std::vector<std::string> tokens;
+    // std::string s = "2020/03/17 17:01:55.120438,DOGE/USDT,ask,0.00186,10000.";
 
-    tokens = tokenise(s, ',');
+    // tokens = tokenise(s, ',');
 
-    for(std::string& t : tokens){
-        std::cout<<t<<std::endl;
+    // for(std::string& t : tokens){
+    //     std::cout<<t<<std::endl;
+    // }
+
+    std::ifstream DataFile{"data.csv"};
+    std::string line;
+
+    if(DataFile.is_open()){
+        std::cout<<"File is open"<<std::endl; 
+
+        while (std::getline(DataFile,line))
+        {
+            std::cout<< line << std::endl;
+        }
+        DataFile.close();
+    }
+    else{
+        std::cout<<"File is closed"<<std::endl;
     }
 
 

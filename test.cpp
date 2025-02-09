@@ -52,6 +52,5 @@ int main(){
         std::cout<<"File is closed"<<std::endl;
     }
 
-
     return 0;
 }

@@ -11,13 +11,23 @@ std::vector<std::string> CSVReader::tokenise(std::string csvLine, char seperator
 }
 
 OrderBookEntry CSVReader::StringtoOBE(){
-    OrderBookEntry ;
+    OrderBookEntry obe{
+        "",
+        "",
+        OrderBookType::ask,
+        1,
+        1,
+    };
+
+    return obe;
 
 }
     
 
 std::vector<OrderBookEntry> CSVReader::readCSV (std::string csvFile){
-
+    
+    std::vector<OrderBookEntry> reader;
+    return reader;
 }
    
 

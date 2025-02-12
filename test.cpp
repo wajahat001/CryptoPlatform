@@ -27,15 +27,6 @@ std::vector<std::string> tokenise(std::string csvLine, char seperator){
 
 int main(){
 
-    // std::vector<std::string> tokens;
-    // std::string s = "2020/03/17 17:01:55.120438,DOGE/USDT,ask,0.00186,10000.";
-
-    // tokens = tokenise(s, ',');
-
-    // for(std::string& t : tokens){
-    //     std::cout<<t<<std::endl;
-    // }
-
     std::ifstream DataFile{"data.csv"};
     std::string line;
     std::vector<std::string> tokens;
@@ -46,6 +37,7 @@ int main(){
 
         while (std::getline(DataFile,line))
         {
+            std::cout<< std::endl;
             std::cout<< line << std::endl;
             tokens = tokenise(line , ',');
             if(tokens.size() != 5){
@@ -56,7 +48,9 @@ int main(){
             {
                 double price = std::stod(tokens[3]);
                 double amount = std::stod(tokens[4]);
-                std::cout<< price << " : " << amount << std::endl;
+                for(std::string& t : tokens){
+                        std::cout<<t<<std::endl;
+                    }
             }
             catch(std::exception& e)
             {

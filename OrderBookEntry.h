@@ -6,7 +6,8 @@
 enum class OrderBookType
 {
     bid,
-    ask
+    ask,
+    unknown
 };
 
 class OrderBookEntry
@@ -24,4 +25,6 @@ public:
         OrderBookType _orderType,
         double _price,
         double _amount);
+
+    static OrderBookType StingToOrderBookType (std::string s);
 };

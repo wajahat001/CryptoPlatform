@@ -19,3 +19,19 @@ OrderBookEntry::OrderBookEntry(
     
    }
 
+OrderBookType OrderBookEntry::StingToOrderBookType(std::string s){
+ if (s=="ask")
+ {
+        return OrderBookType::ask;
+ }
+if (s=="bid")
+ {
+        return OrderBookType::bid;
+ }
+ else {
+        return OrderBookType::unknown;
+ }
+ 
+ 
+}
+
